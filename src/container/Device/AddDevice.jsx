@@ -100,7 +100,7 @@ const AddDevice = ({ openModal, onClose, DeviceDetails }) => {
                             setError({ homeId: '' })
                         }} value={DeviceData?.homeId} >
                             <option >Select</option>
-                        {homeList?.map((o) => {
+                        {homeList.length>0&&homeList?.map((o) => {
                            return <option value={ o?.id}>{o?.homeName}</option>
                         })}
 
@@ -118,7 +118,7 @@ const AddDevice = ({ openModal, onClose, DeviceDetails }) => {
                             setError({ roomId: '' })
                         }} value={DeviceData?.roomId} >
                             <option >Select</option>
-                        {roomList?.map((o) => {
+                        {roomList?.length>0&&roomList?.map((o) => {
                            return <option value={ o?.id}>{o?.roomName}</option>
                         })}
 

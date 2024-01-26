@@ -91,7 +91,7 @@ const AddRoom = ({ openModal, onClose, roomDetails }) => {
                             setError({ homeId: '' })
                         }} value={roomData?.homeId} >
                             <option >Select</option>
-                        {homeList?.map((o) => {
+                        {homeList?.length>0&&homeList?.map((o) => {
                            return <option value={ o?.id}>{o?.homeName}</option>
                         })}
 

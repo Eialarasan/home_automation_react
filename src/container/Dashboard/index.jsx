@@ -70,7 +70,7 @@ const Dashboard = () => {
                             sethomeId(e?.target?.value)
                         }} value={homeId} >
                             <option >Select</option>
-                        {homeList?.map((o) => {
+                        {homeList.length>0&&homeList?.map((o) => {
                            return <option value={ o?.id}>{o?.homeName}</option>
                         })}
 

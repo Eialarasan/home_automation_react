@@ -104,7 +104,7 @@ const AddScheduler = ({ openModal, onClose, SchedulerDetails }) => {
                             setError({ homeId: '' })
                         }} value={SchedulerData?.homeId} >
                             <option >Select</option>
-                        {homeList?.map((o) => {
+                        {homeList?.length>0&&homeList?.map((o) => {
                            return <option value={ o?.id}>{o?.homeName}</option>
                         })}
 
@@ -141,7 +141,7 @@ const AddScheduler = ({ openModal, onClose, SchedulerDetails }) => {
                             setError({ deviceId: '' })
                         }} value={SchedulerData?.deviceId} >
                             <option >Select</option>
-                        {deviceList?.map((o) => {
+                        {deviceList?.length>0&&deviceList?.map((o) => {
                            return <option value={ o?.id}>{o?.deviceName}</option>
                         })}
 
