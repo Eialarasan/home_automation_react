@@ -8,13 +8,10 @@ import action from '../../redux/action';
 const Register = () => {
     const [username, setUserName] = useState("")
     const [password, setPassword] = useState("")
-    const [role, setRole] = useState("")
-    const [showPasswordState, setShowpasswordstate] = useState(true)
     const [errorUser, setErrorUser] = useState('')
     const [errorPass, setErrorPass] = useState('')
     const [errorEmail, setErrorEmail] = useState('')
     const [errorPhone, setErrorPhone] = useState('')
-    const [errorRole, setErrorRole] = useState('')
     const [email, setEmail] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
 
@@ -23,13 +20,7 @@ const Register = () => {
     const navigate = useNavigate()
 
 
-    const managePassword = () => {
-        if (showPasswordState) {
-            setShowpasswordstate(false)
-        } else {
-            setShowpasswordstate(true)
-        }
-    }
+   
 
     const register = () => {
 
@@ -119,6 +110,8 @@ const Register = () => {
                                                 setErrorPass('')
                                             }} value={password}
                                             id="exampleInputPassword" placeholder="Password" />
+                                        {errorPass && <p style={{ color: 'red' }}>{errorPass}</p>}
+
                                     </div>
                                     <a onClick={() => register()} class="btn btn-primary btn-user btn-block">
                                         Register Account
