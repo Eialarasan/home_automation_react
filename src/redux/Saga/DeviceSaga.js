@@ -22,7 +22,7 @@ export function* DeviceListSaga({ params, callback }) {
 export function* addDeviceSaga({ params, callback }) {
     try {
         const response = yield doPost(END_POINTS.ADD_DEVICE, params)
-        yield put(Actions.AddDeviceSuccess(response))
+        yield put(Actions.AddDevicesSuccess(response))
         if (callback) {
             callback(response)
         }
@@ -30,7 +30,7 @@ export function* addDeviceSaga({ params, callback }) {
         if (callback) {
             callback(error)
         }
-        yield put(Actions.AddDeviceFailure(error))
+        yield put(Actions.AddDevicesFailure(error))
 
     }
 }

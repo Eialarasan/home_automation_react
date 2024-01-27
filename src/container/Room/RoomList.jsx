@@ -40,7 +40,7 @@ const Room = () => {
                 toast.error("Sorry something went wrong")
             }
         }
-        dispatch(action.Deleteroom(params, callback))
+        dispatch(action.DeleteRoom(params, callback))
     }
 
     const statusChange = (o) => {

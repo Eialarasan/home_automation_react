@@ -39,7 +39,7 @@ const AddDevice = ({ openModal, onClose, DeviceDetails }) => {
             setError({roomId:"Please select room"})
         } else {
             const callback = (res) => {
-                if (res?.response_code === 0) {
+                if (res) {
                     setDeviceData("")
                     setError("")
                     onClose()

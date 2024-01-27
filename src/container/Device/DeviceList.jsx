@@ -33,6 +33,7 @@ const Device = () => {
             id: id
         }
         const callback = (res) => {
+            console.log(res,"check")
             if (res?.response_code === 0) {
                 getDeviceDetails()
             } else {
