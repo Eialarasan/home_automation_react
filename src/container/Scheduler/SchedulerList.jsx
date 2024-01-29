@@ -78,6 +78,7 @@ const Scheduler = () => {
                                     <th>Device</th>
                                     <th>Start time</th>
                                     <th>End time</th>
+                                    <th>Device</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
