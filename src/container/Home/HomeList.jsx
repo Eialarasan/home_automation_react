@@ -87,7 +87,7 @@ const Home = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {homeList.length > 0 && homeList?.map((o) => {
+                                {homeList?.length > 0 && homeList?.map((o) => {
                                     return <tr>
                                         <td>{o?.homeName}</td>
                                         <td><label class="switch">

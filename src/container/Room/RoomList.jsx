@@ -81,7 +81,7 @@ const Room = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {roomList.length > 0 && roomList?.map((o) => {
+                                {roomList?.length > 0 && roomList?.map((o) => {
                                     return <tr>
                                         <td>{o?.roomName}</td>
                                         <td>{o?.Home?.homeName}</td>
